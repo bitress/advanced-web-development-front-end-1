@@ -6,6 +6,7 @@
     <title>Food Calculator</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/food-calculator.css">
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 
@@ -88,6 +89,7 @@
         
                         <div class="row">
                             <div class="col-12">
+                                
                                 <label class="radio-container">
                                     <input type="radio" name="flavour" value="Vanilla" onchange="alcel.Utils.updateIceCreamPlaceholder(this)">
                                     <span class="radio-label">
@@ -133,7 +135,7 @@
                                     <input type="radio" name="iceCreamSize" value="50" onchange="alcel.Utils.calculate()">
                                     <span class="radio-label">
                                         <i class="fal fa-ice-cream fa-xs"></i>&nbsp;Small
-                                        <span class="price">50</span>
+                                        <span class="price">₱50</span>
                                     </span>
                                 </label>
         
@@ -143,7 +145,7 @@
                                     <span class="radio-label">
                                     
                                         <i class="fal fa-ice-cream fa-sm"></i>&nbsp;Medium
-                                        <span class="price">80</span>
+                                        <span class="price">₱80</span>
                                     </span>
                                 </label>
         
@@ -152,7 +154,7 @@
                                     <span class="radio-label">
                                         
                                         <i class="fal fa-ice-cream fa-lg"></i>&nbsp; Large
-                                        <span class="price">120</span>
+                                        <span class="price">₱120</span>
                                     </span>
                                 </label>
         
@@ -173,7 +175,7 @@
                                             src="https://www.yummydirect.com.au/cdn/shop/products/FrozenMangoChunks2.5KG-7-72ppi-01_1024x1024_818d52b3-8baf-406c-9787-1c5da1c89748_300x300.webp?v=1666847075"
                                             alt="Checkbox Image">
                                         Mango Chunks
-                                        <span class="price">30</span>
+                                        <span class="price">₱30</span>
                                     </span>
                                 </label>
         
@@ -185,7 +187,7 @@
                                             src="https://thissimplekitchen.com/wp-content/uploads/2023/03/Are-Marshmallows-Dairy-Free-3-1200x1500-1.webp"
                                             alt="Checkbox Image">
                                         Marshmallow
-                                        <span class="price">20</span>
+                                        <span class="price">₱20</span>
                                     </span>
                                 </label>
         
@@ -197,7 +199,7 @@
                                             src="https://www.verywellhealth.com/thmb/dEcmHWzetx_-vEgsdrMpYtNAMlM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1405248129-344539d855d747adbea9163da05fd878.jpg"
                                             alt="Checkbox Image">
                                         Cherry
-                                        <span class="price">40</span>
+                                        <span class="price">₱40</span>
                                     </span>
                                 </label>
                             </div>
@@ -214,7 +216,7 @@
                                             src="https://shakeys-zeus-prod.s3.amazonaws.com/images/Cheddar_M9DRodx.png"
                                             alt="Checkbox Image">
                                         Cheese
-                                        <span class="price">20</span>
+                                        <span class="price">₱20</span>
                                     </span>
                                 </label>
         
@@ -226,7 +228,7 @@
                                             src="https://blueberry.org/wp-content/uploads/2021/04/Fresh-Highbush-Blueberries-in-Heart-Dish.jpg"
                                             alt="Checkbox Image">
                                         Blueberry
-                                        <span class="price">40</span>
+                                        <span class="price">₱40</span>
                                     </span>
                                 </label>
         
@@ -238,7 +240,7 @@
                                             src="https://shakeys-zeus-prod.s3.amazonaws.com/images/Extra_Bacon_tN1MTiv.png"
                                             alt="Checkbox Image">
                                         Bacon
-                                        <span class="price">40</span>
+                                        <span class="price">₱40</span>
                                     </span>
                                 </label>
                             </div>
@@ -246,10 +248,13 @@
                     </div>
                 </div>
         
-        
                 <div class="cart-box">
+                    <button class="quantity-button minus-button" onclick="decrementQuantity()">-</button>
+                    <input type="number" id="quantity" value="1" onchange="alcel.Utils.calculate()">
+                    <button class="quantity-button plus-button" onclick="incrementQuantity()">+</button>
                     Total Price: <span id="total_price"></span>
                 </div>
+                
         
             </div>
         

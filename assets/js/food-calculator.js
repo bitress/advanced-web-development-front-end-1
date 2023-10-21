@@ -22,10 +22,41 @@ var alcel = {
 
 
 alcel.Utils.calculate = function() {
+    const selectedSize = document.querySelector('input[name="iceCreamSize"]:checked');
+    const selectedToppings = document.querySelectorAll('input[name="topping"]:checked');
+    const quantity = document.getElementById("quantity");
+    const pricePlaceholder = document.getElementById("total_price");
   
-    
-}
-
+    let totalToppingPrice = 0;
+    let finalPrice = 0;
+  
+    let sizePrice = parseInt(selectedSize.value);
+  
+    totalToppingPrice += sizePrice;
+  
+    selectedToppings.forEach(checkbox => {
+      totalToppingPrice += parseInt(checkbox.value);
+    });
+  
+    finalPrice = parseInt(quantity.value) * totalToppingPrice;
+  
+    pricePlaceholder.textContent = `₱${finalPrice}`;
+  }
+  
+  function incrementQuantity() {
+    const quantity = document.getElementById("quantity");
+    quantity.value = parseInt(quantity.value) + 1;
+    alcel.Utils.calculate();
+  }
+  
+  function decrementQuantity() {
+    const quantity = document.getElementById("quantity");
+    if (parseInt(quantity.value) > 1) {
+      quantity.value = parseInt(quantity.value) - 1;
+      alcel.Utils.calculate();
+    }
+  }
+  
 alcel.Utils.updateIceCreamPlaceholder = function(radio) {
     const flavour = radio.value;
 
