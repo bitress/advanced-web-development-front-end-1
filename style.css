@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat@1&display=swap');
+@import url('fonts/CenturyGothic/font.css');
+
+:root {
+  --storm: #565c5e;
+  --forest-green: #455954;
+  --leather: #9d7463;
+  --blue: #b5c2c7;
+  --linen: #dfdbd8;
+}
+
+html {
+  font-family: 'Century Gothic', sans-serif;
+  background-color: var(--linen);
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--storm);
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+/* Select Option CSS */
+.select {
+  max-width: 300px;
+  width: 100%;
+  height: 44px;
+  background-color: #05060f0a;
+  border-radius: .5rem;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  transition: border-color .3s cubic-bezier(.25, .01, .25, 1) 0s, color .3s cubic-bezier(.25, .01, .25, 1) 0s, background .2s cubic-bezier(.25, .01, .25, 1) 0s;
+}
+
+.select-label {
+  display: block;
+  margin-bottom: .3rem;
+  font-size: .9rem;
+  font-weight: bold;
+  color: #05060f99;
+  transition: color .3s cubic-bezier(.25, .01, .25, 1) 0s;
+}
+
+.select:hover,
+.select:focus {
+  outline: none;
+  border-color: #05060f;
+}
+
+.select:focus {
+  color: #05060fc2;
+}
+
+/* Style for the select dropdown */
+.select select {
+  appearance: none;
+  /* Remove default styles */
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  color: #05060f;
+  cursor: pointer;
+}
+
+/* Style the arrow icon */
+.select select::after {
+  content: '\25BC';
+  /* Unicode for down arrow */
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  pointer-events: none;
+  /* Prevent clicking on the arrow */
+}
+
+/* Style the select options */
+.select select option {
+  background-color: #05060f0a;
+  color: #05060f;
+  font-size: 1rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  transition: background-color .2s cubic-bezier(.25, .01, .25, 1) 0s, color .2s cubic-bezier(.25, .01, .25, 1) 0s;
+}
+
+.select select option:hover {
+  background-color: #05060f;
+  color: #05060fc2;
+}
+
+
+.input-group {
+  width: 100%;
+}
+
+.input {
+  max-width: 300px;
+  width: 100%;
+  height: 44px;
+  background-color: #05060f0a;
+  border-radius: .5rem;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  transition: border-color .3s cubic-bezier(.25, .01, .25, 1) 0s, color .3s cubic-bezier(.25, .01, .25, 1) 0s, background .2s cubic-bezier(.25, .01, .25, 1) 0s;
+}
+
+.label {
+  display: block;
+  margin-bottom: .3rem;
+  font-size: .9rem;
+  font-weight: bold;
+  color: #05060f99;
+  transition: color .3s cubic-bezier(.25, .01, .25, 1) 0s;
+}
+
+.input:hover,
+.input:focus,
+.input-group:hover .input {
+  outline: none;
+  border-color: #05060f;
+}
+
+.input-group:hover .label,
+.input:focus {
+  color: #05060fc2;
+}
+
+
+/* Checkbox CSS */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-input {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #05060f;
+  border-radius: 0.3rem;
+  position: relative;
+  transition: border-color .3s cubic-bezier(.25, .01, .25, 1) 0s;
+}
+
+.checkbox-input:checked {
+  border-color: #05060f;
+  background-color: #05060f;
+}
+
+.checkbox-checkmark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity .2s cubic-bezier(.25, .01, .25, 1) 0s;
+}
+
+.checkbox-input:checked~.checkbox-checkmark {
+  opacity: 1;
+}
+
+fieldset {
+  border: 1px solid black;
+}
+
+
+.form {
+  padding: 20px;
+}
+
+.btn {
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* Styles for the modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Styles for the button */
+#openModalBtn {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#openModalBtn:hover {
+  background-color: #0056b3;
+}
+
+
+.primary-button {
+  max-width: 300px;
+  width: 100%;
+  height: 44px;
+  background-color: var(--blue);
+  border-radius: .5rem;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  color: black;
+  transition: border-color .3s cubic-bezier(.25, .01, .25, 1) 0s, color .3s cubic-bezier(.25, .01, .25, 1) 0s, background .2s cubic-bezier(.25, .01, .25, 1) 0s;
+}
+
+.primary-button:hover,
+.primary-button:focus {
+  outline: none;
+  border-color: #05060f;
+}
+
+.success-button {
+  max-width: 300px;
+  width: 100%;
+  height: 44px;
+  background-color: var(--forest-green);
+  border-radius: .5rem;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  color: var(--linen);
+  transition: border-color .3s cubic-bezier(.25, .01, .25, 1) 0s, color .3s cubic-bezier(.25, .01, .25, 1) 0s, background .2s cubic-bezier(.25, .01, .25, 1) 0s;
+}
+
+.success-button:hover,
+.success-button:focus {
+  outline: none;
+  border-color: #05060f;
+}
+
+
+.container {
+  max-width: 100%;
+  margin: 40px;
+}
+
+.box {
+  margin: 20px;
+  border: 2px solid black;
+}
+
+.box:nth-child(2) {
+  padding: 20px;
+}
+
+.box-content {
+  margin: 20px;
+}
+
+
+.ml-4 {
+  margin-left: 10%;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo img {
+  border-radius: 50%;
+  width: 150px;
+}
+
+.logo p {
+  margin-top: 0;
+}
+
+.masthead {
+  padding: 16px;
+  border: 2px solid var(--blue);
+  background-color: var(--storm);
+  color: var(--linen);
+
+}
+
+.subject_name {
+  display: flex;
+  margin-top: 5%;
+}
+
+.subject_name h3 {
+  font-size: 26px;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20%;
+  margin-left: 100px;
+}
+
+.profile-image img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-size: 16px;
+  margin: 0;
+  margin-top: 20%;
+
+}
+
+nav {
+  display: flex;
+}
+
+.o {
+  transition: background-color .4s;
+  display: inline-block;
+  border: 1px solid black;
+  padding: 14px;
+}
+
+.button-group {
+  text-align: center;
+}
+
+.o select {
+  border: none;
+  padding: 6px;
+  background-color: var();
+}
+
+
+.o select:hover {
+  border: none;
+}
+
+.tabcontent {
+  display: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 40px;
+}
+
+nav li:hover {
+  background-color: black;
+}
+
+nav a:hover {
+  color: white;
+}
+
+.active {
+  background-color: black;
+}
+
+.active a {
+  color: white;
+}
+
+.footer {
+  text-align: center;
+  font-size: 16px;
+  border: 1px solid black;
+}
+
+
+
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-1 {
+  flex: 0 0 8.33%;
+}
+
+.col-2 {
+  flex: 0 0 16.66%;
+}
+
+.col-3 {
+  flex: 0 0 25%;
+}
+
+.col-4 {
+  flex: 0 0 33.33%;
+}
+
+.col-5 {
+  flex: 0 0 41.66%;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+}
+
+.col-7 {
+  flex: 0 0 58.33%;
+}
+
+.col-8 {
+  flex: 0 0 66.33%;
+}
+
+.col-9 {
+  flex: 0 0 75%;
+}
+
+.col-10 {
+  flex: 0 0 83.33%;
+}
+
+.col-11 {
+  flex: 0 0 91.66%;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  [class*="col-"] {
+    width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .masthead {
+    text-align: center;
+  }
+
+  .profile-container {
+    display: inline;
+    text-align: center;
+  }
+
+  .profile-name {
+    margin: 0;
+  }
+
+  .navbar-toggled {
+    display: block;
+  }
+
+  .navbar-toggled li {
+    display: block;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+
+  nav ul {
+    display: none;
+    padding: 10px 0;
+  }
+
+  .hamburger-menu {
+    display: block;
+  }
+
+  .ml-4 {
+    margin: 0;
+  }
+
+  .o {
+    display: block;
+  }
+}
