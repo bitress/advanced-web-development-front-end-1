@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Calculator</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/food-calculator.css">
 </head>
 <body>
 
@@ -60,6 +61,201 @@
         <div class="box">
 
 
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-5">
+                        <div class="icecream-info">
+                            <div class="icecream-image">
+                                <img src="https://www.foodandwine.com/thmb/Dl7L5u2c7sbVp6vyxnqhcxz9M50=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Super-Scoops-FT-2-MAG0622-00568f6534a44e0c8a422b66b25d6cf6.jpg" width="200px">
+                            </div>
+                            <div class="icecream-name">
+                                <h3>Ice Cream</h3>
+                            </div>
+                            <div class="icecream-price">
+                            </div>
+                            <div class="icecream-description">
+                                <p>Cyanne's Ice Cream. Naimas nga siladan.</p>
+                            </div>
+        
+                        </div>
+        
+        
+                    </div>
+        
+                    <div class="col-7">
+        
+                        <h3>Flavour</h3>
+        
+                        <div class="row">
+                            <div class="col-12">
+                                <label class="radio-container">
+                                    <input type="radio" name="flavour" value="Vanilla" onchange="alcel.Utils.updateIceCreamPlaceholder(this)">
+                                    <span class="radio-label">
+                                        <img class="radio-image" src="https://previews.123rf.com/images/gtranquillity/gtranquillity1509/gtranquillity150900003/44829643-vanilla-ice-cream-scoop-scooped-out-of-container-with-untensil.jpg"   
+                                         alt="Radio Image">
+                                        Vanilla
+                                    </span>
+                                </label>
+        
+        
+                                <label class="radio-container">
+                                    <input type="radio" name="flavour" value="Mango" onchange="alcel.Utils.updateIceCreamPlaceholder(this)">
+                                    <span class="radio-label">
+                                        <img class="radio-image"
+                                            src="https://culinaryshades.com/wp-content/uploads/2022/03/mango-ice-cream-sqr01-500x500.jpg"
+                                            alt="Radio Image">
+                                        Mango
+                                        
+                                    </span>
+                                </label>
+        
+                                <label class="radio-container">
+                                    <input type="radio" name="flavour" value="Mint" onchange="alcel.Utils.updateIceCreamPlaceholder(this)">
+                                    <span class="radio-label">
+                                        <img class="radio-image"
+                                            src="https://www.willflyforfood.net/wp-content/uploads/2022/05/ice-cream-flavors-mint-chocolate-chip.jpg.webp"
+                                            alt="Radio Image">
+                                        Mint
+        
+                                    </span>
+                                </label>
+        
+                            </div>
+                        </div>
+        
+                        <h3>Size</h3>
+        
+                        <div class="row">
+                            <div class="col-12">
+        
+                                
+                                <label class="radio-container">
+                                    <input type="radio" name="iceCreamSize" value="50" onchange="alcel.Utils.calculate()">
+                                    <span class="radio-label">
+                                        <i class="fal fa-ice-cream fa-xs"></i>&nbsp;Small
+                                        <span class="price">50</span>
+                                    </span>
+                                </label>
+        
+        
+                                <label class="radio-container">
+                                    <input type="radio" name="iceCreamSize" value="80" onchange="alcel.Utils.calculate()">
+                                    <span class="radio-label">
+                                    
+                                        <i class="fal fa-ice-cream fa-sm"></i>&nbsp;Medium
+                                        <span class="price">80</span>
+                                    </span>
+                                </label>
+        
+                                <label class="radio-container">
+                                    <input type="radio" name="iceCreamSize" value="120" onchange="alcel.Utils.calculate()">
+                                    <span class="radio-label">
+                                        
+                                        <i class="fal fa-ice-cream fa-lg"></i>&nbsp; Large
+                                        <span class="price">120</span>
+                                    </span>
+                                </label>
+        
+                            </div>
+                        </div>
+        
+        
+                        <h3>Topping</h3>
+        
+        
+                        <div class="row">
+                            <div class="col-6">
+        
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="topping" value="30" onchange="alcel.Utils.calculate()">
+                                    <span class="checkbox-label">
+                                        <img class="checkbox-image"
+                                            src="https://www.yummydirect.com.au/cdn/shop/products/FrozenMangoChunks2.5KG-7-72ppi-01_1024x1024_818d52b3-8baf-406c-9787-1c5da1c89748_300x300.webp?v=1666847075"
+                                            alt="Checkbox Image">
+                                        Mango Chunks
+                                        <span class="price">30</span>
+                                    </span>
+                                </label>
+        
+        
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="topping" value="20" onchange="alcel.Utils.calculate()">
+                                    <span class="checkbox-label">
+                                        <img class="checkbox-image"
+                                            src="https://thissimplekitchen.com/wp-content/uploads/2023/03/Are-Marshmallows-Dairy-Free-3-1200x1500-1.webp"
+                                            alt="Checkbox Image">
+                                        Marshmallow
+                                        <span class="price">20</span>
+                                    </span>
+                                </label>
+        
+        
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="topping" value="40" onchange="alcel.Utils.calculate()">
+                                    <span class="checkbox-label">
+                                        <img class="checkbox-image"
+                                            src="https://www.verywellhealth.com/thmb/dEcmHWzetx_-vEgsdrMpYtNAMlM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1405248129-344539d855d747adbea9163da05fd878.jpg"
+                                            alt="Checkbox Image">
+                                        Cherry
+                                        <span class="price">40</span>
+                                    </span>
+                                </label>
+                            </div>
+        
+        
+        
+                            <div class="col-6">
+        
+        
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="topping"  value="20" onchange="alcel.Utils.calculate()">
+                                    <span class="checkbox-label">
+                                        <img class="checkbox-image"
+                                            src="https://shakeys-zeus-prod.s3.amazonaws.com/images/Cheddar_M9DRodx.png"
+                                            alt="Checkbox Image">
+                                        Cheese
+                                        <span class="price">20</span>
+                                    </span>
+                                </label>
+        
+        
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="topping" value="40" onchange="alcel.Utils.calculate()">
+                                    <span class="checkbox-label">
+                                        <img class="checkbox-image"
+                                            src="https://blueberry.org/wp-content/uploads/2021/04/Fresh-Highbush-Blueberries-in-Heart-Dish.jpg"
+                                            alt="Checkbox Image">
+                                        Blueberry
+                                        <span class="price">40</span>
+                                    </span>
+                                </label>
+        
+        
+                                <label class="checkbox-container">
+                                    <input type="checkbox" name="topping" value="40" onchange="alcel.Utils.calculate()">
+                                    <span class="checkbox-label">
+                                        <img class="checkbox-image"
+                                            src="https://shakeys-zeus-prod.s3.amazonaws.com/images/Extra_Bacon_tN1MTiv.png"
+                                            alt="Checkbox Image">
+                                        Bacon
+                                        <span class="price">40</span>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+        
+                <div class="cart-box">
+                    Total Price: <span id="total_price"></span>
+                </div>
+        
+            </div>
+        
+            
+
+
         </div>
     </div>
 
@@ -70,6 +266,7 @@
     </footer>
     
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/food-calculator.js"></script>
 
 </body>
 </html>
