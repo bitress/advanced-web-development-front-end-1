@@ -26,6 +26,8 @@ alcel.Utils.calculate = function() {
     const selectedToppings = document.querySelectorAll('input[name="topping"]:checked');
     const quantity = document.getElementById("quantity");
     const pricePlaceholder = document.getElementById("total_price");
+    
+    const cartBox = document.getElementById("cart");
   
     let totalToppingPrice = 0;
     let finalPrice = 0;
@@ -41,7 +43,9 @@ alcel.Utils.calculate = function() {
     finalPrice = parseInt(quantity.value) * totalToppingPrice;
   
     pricePlaceholder.textContent = `₱${finalPrice}`;
-  }
+    cartBox.style.display = 'flex';
+    
+      }
   
   function incrementQuantity() {
     const quantity = document.getElementById("quantity");
@@ -66,6 +70,13 @@ alcel.Utils.updateIceCreamPlaceholder = function(radio) {
        const iceCreamName = document.querySelector('.icecream-name h3');
        const iceCreamPrice = document.querySelector('.icecream-price');
        const iceCreamDescription = document.querySelector('.icecream-description p');
+
+      const radioAndCheckboxInputs = document.querySelectorAll('input[type="radio"], input[type="checkbox"]');
+
+      radioAndCheckboxInputs.forEach(function (input) {
+          input.removeAttribute("disabled");
+      });
+
    
        if (selectedFlavor) {
            iceCreamImage.src = selectedFlavor.image;

@@ -2,58 +2,61 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #ccc;
+    border: 2px solid #00838d;
     border-radius: 10px;
-    padding: 16px;
+    padding: 20px;
     background-color: #f9f9f9;
     margin: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.icecream-image img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .icecream-image img {
     max-width: 100%;
     height: auto;
     border-radius: 50%;
-}
-
-.icecream-name h3 {
+  }
+  
+  .icecream-name h3 {
     font-size: 24px;
     margin: 10px 0;
-    color: #333;
+    color: #00838d;
     text-align: center;
-}
-
-.icecream-price {
+  }
+  
+  .icecream-price {
     font-size: 20px;
     color: #ff5722;
-    margin-bottom: 10px;
-}
-
-.icecream-description p {
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .icecream-description p {
     font-size: 16px;
     color: #666;
     text-align: center;
-}
-
-#total_price {
-    border: 1px solid black;
+  }
+  
+  #total_price {
+    border: 1px solid #00838d;
     width: 70px;
     padding: 10px;
     text-align: center;
-}
-
-.cart-box {
+    color: #00838d;
+    font-weight: bold;
+  }
+  
+  .cart-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #f9f9f9;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 2px solid #00838d;
+    border-radius: 10px;
   }
   
   .cart-box button {
-    background-color: #007BFF;
+    background-color: #00838d;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -71,15 +74,16 @@
     font-size: 16px;
     width: 50px;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 2px solid #00838d;
     border-radius: 5px;
   }
   
   #total_price {
     font-size: 16px;
-    color: #333;
+    color: #00838d;
     font-weight: bold;
   }
+  
   
 
 input[type="checkbox"] {
@@ -111,7 +115,7 @@ input[type="checkbox"] {
 }
 
 .checkbox-container :hover{
-background-color: cyan;
+    background-color: antiquewhite;
 }
 
 .checkbox-image {
@@ -122,8 +126,10 @@ background-color: cyan;
 }
 
 input[type="checkbox"]:checked+.checkbox-label {
-    border: 1px solid #00f;
     border-radius: 10px;
+    transform: translateY(-4px);
+    background-color: antiquewhite;
+
 }
 
 input[type="radio"] {
@@ -144,6 +150,7 @@ input[type="radio"] {
 input[type="radio"]:checked+.vanilla-label {
     background-color: #fffdd0;
     box-shadow: 0 8px 6px -6px gray;
+    transform: translateY(4px);
 }
 
 .mint :hover {
@@ -153,6 +160,7 @@ input[type="radio"]:checked+.vanilla-label {
 input[type="radio"]:checked+.mint-label {
     background-color: #3EB489;
     box-shadow: 0 8px 6px -6px #3EB489;
+    transform: translateY(4px);
 }
 
 .mango :hover {
@@ -162,6 +170,7 @@ input[type="radio"]:checked+.mint-label {
 input[type="radio"]:checked+.mango-label {
     background-color: #FFBF00;
     box-shadow: 0 8px 6px -6px #ffbf00;
+    transform: translateY(4px);
 }
 
 
@@ -198,7 +207,8 @@ input[type="radio"]:checked+.mango-label {
 
 input[type="radio"]:checked+.radio-label {
     border-radius: 10px;
-    
+    transform: translateY(4px);
+
 }
 
 input[type="radio"]:checked+.price-label {
