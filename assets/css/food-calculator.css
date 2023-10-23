@@ -133,6 +133,34 @@ input[type="radio"] {
     width: 180px;
 }
 
+.vanilla :hover {
+    background-color: #fffdd0;
+}
+
+input[type="radio"]:checked+.vanilla-label {
+    background-color: #fffdd0;
+    box-shadow: 0 8px 6px -6px #f1d3b2;
+}
+
+.mint :hover {
+    background-color: #3EB489;
+}
+
+input[type="radio"]:checked+.mint-label {
+    background-color: #3EB489;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.mango :hover {
+    background-color: #FFBF00;
+}
+
+input[type="radio"]:checked+.mango-label {
+    background-color: #FFBF00;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+
 .radio-label {
     cursor: pointer;
     display: flex;
@@ -157,6 +185,5 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked+.radio-label {
-    border: 1px solid #00f;
     border-radius: 10px;
 }
