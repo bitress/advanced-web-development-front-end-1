@@ -13,6 +13,7 @@
 .icecream-image img {
     max-width: 100%;
     height: auto;
+    border-radius: 50%;
 }
 
 .icecream-name h3 {
@@ -139,7 +140,7 @@ input[type="radio"] {
 
 input[type="radio"]:checked+.vanilla-label {
     background-color: #fffdd0;
-    box-shadow: 0 8px 6px -6px #f1d3b2;
+    box-shadow: 0 8px 6px -6px gray;
 }
 
 .mint :hover {
@@ -148,7 +149,7 @@ input[type="radio"]:checked+.vanilla-label {
 
 input[type="radio"]:checked+.mint-label {
     background-color: #3EB489;
-    box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px #3EB489;
 }
 
 .mango :hover {
@@ -157,9 +158,16 @@ input[type="radio"]:checked+.mint-label {
 
 input[type="radio"]:checked+.mango-label {
     background-color: #FFBF00;
-    box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 8px 6px -6px #ffbf00;
 }
 
+
+.price {
+    background-color: #3EB489;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 15px;
+}
 
 .radio-label {
     cursor: pointer;
@@ -186,4 +194,6 @@ input[type="radio"]:checked+.mango-label {
 
 input[type="radio"]:checked+.radio-label {
     border-radius: 10px;
+    box-shadow: 0 8px 6px -6px black;
+    
 }
