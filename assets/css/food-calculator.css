@@ -35,6 +35,12 @@
     text-align: center;
 }
 
+#total_price {
+    border: 1px solid black;
+    width: 70px;
+    padding: 10px;
+    text-align: center;
+}
 
 .cart-box {
     display: flex;
@@ -104,6 +110,10 @@ input[type="checkbox"] {
     align-items: center;
 }
 
+.checkbox-container :hover{
+background-color: cyan;
+}
+
 .checkbox-image {
     width: 70px;
     height: 70px;
@@ -111,17 +121,10 @@ input[type="checkbox"] {
     object-fit: cover;
 }
 
-input[type="checkbox"]:checked+.checkbox-container .checkbox-label {
-    background-color: #00f;
-}
-
-
 input[type="checkbox"]:checked+.checkbox-label {
     border: 1px solid #00f;
     border-radius: 10px;
 }
-
-
 
 input[type="radio"] {
     display: none;
@@ -163,10 +166,11 @@ input[type="radio"]:checked+.mango-label {
 
 
 .price {
-    background-color: #3EB489;
     border-radius: 20px;
     padding: 5px;
     margin: 15px;
+    border: 1px solid black;
+    font-size: 10px;
 }
 
 .radio-label {
@@ -194,6 +198,11 @@ input[type="radio"]:checked+.mango-label {
 
 input[type="radio"]:checked+.radio-label {
     border-radius: 10px;
-    box-shadow: 0 8px 6px -6px black;
+    
+}
+
+input[type="radio"]:checked+.price-label {
+    border-radius: 10px;
+    box-shadow: 0 8px 6px -6px rgb(199, 1, 248);
     
 }
